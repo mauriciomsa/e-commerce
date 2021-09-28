@@ -1,0 +1,28 @@
+{
+  "product-list": [
+    {
+      "id": "1",
+      "name": "T-Shirt",
+      "description": "",
+      "price": "17.28"
+    },
+    {
+      "id": "2",
+      "name": "Cargo Shorts",
+      "description": "",
+      "price": "36.53"
+    },
+    {
+      "id": "3",
+      "name": "Hat",
+      "description": "",
+      "price": "10.75"
+    },
+    {
+      "id": "4",
+      "name": "Hoodie",
+      "description": "",
+      "price": "44.25"
+    }
+  ]
+}
