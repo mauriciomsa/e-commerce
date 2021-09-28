@@ -24,5 +24,39 @@
       "description": "",
       "price": 44.25
     }
+  ],
+  "cart-list": [
+    {
+      "id": 1,
+      "productId": 1,
+      "quantity": 2,
+      "name": "T-Shirt",
+      "description": "",
+      "price": 34.56
+    },
+    {
+      "productId": 2,
+      "quantity": 1,
+      "name": "Cargo Shorts",
+      "description": "",
+      "price": 36.53,
+      "id": 2
+    },
+    {
+      "productId": 3,
+      "quantity": 1,
+      "name": "Hat",
+      "description": "",
+      "price": 10.75,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "productId": 4,
+      "quantity": 2,
+      "name": "Hoodie",
+      "description": "",
+      "price": 88.5
+    }
   ]
 }

@@ -11,13 +11,17 @@ import {MatIconModule} from "@angular/material/icon";
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductItemComponent } from './components/product-list/product-item/product-item.component';
 import { HttpClientModule } from "@angular/common/http";
+import { CartListComponent } from './components/cart-list/cart-list.component';
+import { CartItemComponent } from './components/cart-list/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     ProductListComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    CartListComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
