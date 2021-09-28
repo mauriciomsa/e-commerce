@@ -11,7 +11,6 @@ import {CartItemService} from "../../services/cart-item.service";
 })
 export class ProductListComponent implements OnInit {
   productList!: ProductItem[];
-  cartList!: CartItem[];
   cartItem!: CartItem;
 
   constructor(
@@ -22,8 +21,8 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.productItemService
       .getAllProductItems()
-      .subscribe((products: ProductItem[]) => {
-        this.productList = products;
+      .subscribe((productList: ProductItem[]) => {
+        this.productList = productList;
       })
   }
 
@@ -33,11 +32,11 @@ export class ProductListComponent implements OnInit {
 
     this.cartItemService
       .getAllCartItems()
-      .subscribe((products: CartItem[]) => {
-        for (let i = 0; i < products.length; i++) {
-          if (products[i].productId === productItem.id) {
-            id = products[i].id;
-            quantity += products[i].quantity;
+      .subscribe((cartList: CartItem[]) => {
+        for (let i = 0; i < cartList.length; i++) {
+          if (cartList[i].productId === productItem.id) {
+            id = cartList[i].id;
+            quantity += cartList[i].quantity;
             break;
           }
         }

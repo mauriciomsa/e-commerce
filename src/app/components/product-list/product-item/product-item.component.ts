@@ -7,7 +7,7 @@ import {ProductItem} from "../../../models/product-item";
   styleUrls: ['./product-item.component.scss']
 })
 export class ProductItemComponent implements OnInit {
-  @Input() product!: ProductItem;
+  @Input() productItem!: ProductItem;
   @Output() onAddToCart: EventEmitter<ProductItem> = new EventEmitter<ProductItem>()
 
   constructor() { }

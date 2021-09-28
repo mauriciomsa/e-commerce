@@ -1,7 +1,7 @@
 <h2>Products</h2>
 
 <app-product-item
-  *ngFor="let product of productList"
-  [product]="product"
+  *ngFor="let productItem of productList"
+  [productItem]="productItem"
   (onAddToCart)="setCartItem($event)">
 </app-product-item>

@@ -1,1 +1,6 @@
-<p>cart-list works!</p>
+<h2>Cart</h2>
+
+<app-cart-item
+  *ngFor="let cartItem of cartList"
+  [cartItem]="cartItem">
+</app-cart-item>

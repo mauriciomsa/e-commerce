@@ -13,6 +13,12 @@ import { ProductItemComponent } from './components/product-list/product-item/pro
 import { HttpClientModule } from "@angular/common/http";
 import { CartListComponent } from './components/cart-list/cart-list.component';
 import { CartItemComponent } from './components/cart-list/cart-item/cart-item.component';
+import {RouterModule, Routes} from "@angular/router";
+
+const routes: Routes = [
+  {path: '', component: ProductListComponent},
+  {path: 'cart', component: CartListComponent},
+]
 
 @NgModule({
   declarations: [
@@ -30,7 +36,8 @@ import { CartItemComponent } from './components/cart-list/cart-item/cart-item.co
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes, {enableTracing: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
