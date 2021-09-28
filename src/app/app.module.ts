@@ -9,12 +9,15 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductItemComponent } from './components/product-list/product-item/product-item.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
