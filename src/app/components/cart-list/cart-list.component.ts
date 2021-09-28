@@ -13,9 +13,23 @@ export class CartListComponent implements OnInit {
   constructor(private cartItemService: CartItemService) { }
 
   ngOnInit(): void {
-    this.cartItemService.getAllCartItems().subscribe((cartList: CartItem[]) => {
+    this.cartItemService
+      .getAllCartItems()
+      .subscribe((cartList: CartItem[]) => {
       this.cartList = cartList;
     })
+  }
+
+  onDeleteCartItem(cartItemId: any): void {
+    this.cartItemService
+      .deleteCartItem(cartItemId)
+      .subscribe(() => {
+        this.cartItemService
+          .getAllCartItems()
+          .subscribe((cartList: CartItem[]) => {
+            this.cartList = cartList;
+          })
+      })
   }
 
 }

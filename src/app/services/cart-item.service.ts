@@ -26,4 +26,9 @@ export class CartItemService {
     const url = `${this.cartListUrl}/${cartItem.id}`
     return this.http.put<CartItem>(url, cartItem, httpOptions)
   }
+
+  deleteCartItem(cartItemId: number): Observable<CartItem> {
+    const url = `${this.cartListUrl}/${cartItemId}`
+    return this.http.delete<CartItem>(url)
+  }
 }

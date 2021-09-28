@@ -2,5 +2,6 @@
 
 <app-cart-item
   *ngFor="let cartItem of cartList"
-  [cartItem]="cartItem">
+  [cartItem]="cartItem"
+  (onCartItemDelete)="onDeleteCartItem($event)">
 </app-cart-item>
