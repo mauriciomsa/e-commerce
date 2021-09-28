@@ -44,9 +44,10 @@ export class ProductListComponent implements OnInit {
           id: id,
           productId: productItem.id,
           quantity: quantity,
+          totalPrice: productItem.price * quantity,
           name: productItem.name,
           description: productItem.description,
-          price: productItem.price * quantity
+          price: productItem.price
         }
         this.addToCart()
       })

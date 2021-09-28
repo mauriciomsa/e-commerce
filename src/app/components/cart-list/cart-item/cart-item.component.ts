@@ -9,13 +9,26 @@ import {CartItem} from "../../../models/cart-item";
 export class CartItemComponent implements OnInit {
   @Input() cartItem!: CartItem;
   @Output() onCartItemDelete: EventEmitter<CartItem> = new EventEmitter<CartItem>()
+  @Output() onUpdateQuantity: EventEmitter<CartItem> = new EventEmitter<CartItem>()
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onClick(cartItemId: any) {
+  onDeleteClick(cartItemId: any) {
     this.onCartItemDelete.emit(cartItemId)
+  }
+
+  onDecreaseQuantityClick(cartItem: CartItem) {
+    cartItem.quantity -= 1;
+    cartItem.totalPrice = cartItem.quantity * cartItem.price;
+    this.onUpdateQuantity.emit(cartItem)
+  }
+
+  onIncreaseQuantityClick(cartItem: CartItem) {
+    cartItem.quantity += 1;
+    cartItem.totalPrice = cartItem.quantity * cartItem.price;
+    this.onUpdateQuantity.emit(cartItem)
   }
 }

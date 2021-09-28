@@ -32,4 +32,15 @@ export class CartListComponent implements OnInit {
       })
   }
 
+  onUpdateQuantity(cartItem: CartItem) {
+    this.cartItemService
+      .updateQuantity(cartItem)
+      .subscribe(() => {
+      this.cartItemService
+        .getAllCartItems()
+        .subscribe((cartList: CartItem[]) => {
+        this.cartList = cartList;
+      })
+    })
+  }
 }

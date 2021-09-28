@@ -15,7 +15,7 @@ export class ProductItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick(product: ProductItem):void {
+  onAddToCartClick(product: ProductItem):void {
     this.onAddToCart.emit(product)
   }
 
