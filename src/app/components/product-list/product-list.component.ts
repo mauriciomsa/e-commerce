@@ -40,6 +40,9 @@ export class ProductListComponent implements OnInit {
             break;
           }
         }
+
+        if (quantity > 10) return;
+
         this.cartItem = {
           id: id,
           productId: productItem.id,

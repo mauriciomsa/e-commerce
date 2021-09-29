@@ -3,6 +3,17 @@
   width: 25px;
 }
 
+.increase-button, .decrease-button {
+  background-color: #efefef;
+  border: 1px solid #0000006e;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.increase-button:active, .decrease-button:active {
+  transform: scale(0.96);
+}
+
 .quantity {
   text-align: center;
 }

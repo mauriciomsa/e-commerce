@@ -22,7 +22,7 @@ body {
   float: left;
   background-color: #e2e2e2c4;
   color: #353535;
-  font-weight: bolder;
+  font-weight: 500;
 }
 
 .buy-button, .delete-button {
@@ -35,4 +35,8 @@ body {
   color: white;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.buy-button:active, .delete-button:active {
+  transform: scale(0.98);
 }
