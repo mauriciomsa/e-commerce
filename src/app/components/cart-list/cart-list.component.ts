@@ -9,6 +9,7 @@ import {CartItemService} from "../../services/cart-item.service";
 })
 export class CartListComponent implements OnInit {
   cartList!: CartItem[];
+  total: number = 0;
 
   constructor(private cartItemService: CartItemService) { }
 
@@ -17,7 +18,16 @@ export class CartListComponent implements OnInit {
       .getAllCartItems()
       .subscribe((cartList: CartItem[]) => {
       this.cartList = cartList;
+      this.updateTotal()
     })
+  }
+
+  updateTotal() {
+    this.total = 0;
+
+    for (let i = 0; i < this.cartList.length; i++) {
+      this.total += this.cartList[i].totalPrice
+    }
   }
 
   onDeleteCartItem(cartItemId: any): void {
@@ -28,6 +38,7 @@ export class CartListComponent implements OnInit {
           .getAllCartItems()
           .subscribe((cartList: CartItem[]) => {
             this.cartList = cartList;
+            this.updateTotal()
           })
       })
   }
@@ -40,6 +51,7 @@ export class CartListComponent implements OnInit {
         .getAllCartItems()
         .subscribe((cartList: CartItem[]) => {
         this.cartList = cartList;
+        this.updateTotal()
       })
     })
   }

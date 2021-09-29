@@ -1,7 +1,11 @@
-<h3>{{ cartItem.name }}</h3>
-<p>{{ cartItem.description }}</p>
-<p>{{ cartItem.quantity }}</p>
-<p>{{ cartItem.totalPrice }}</p>
-<button (click)="onDecreaseQuantityClick(cartItem)">-</button>
-<button (click)="onIncreaseQuantityClick(cartItem)">+</button>
-<button (click)="onDeleteClick(cartItem.id)">Delete</button>
+<div class="product">
+  <h3>{{ cartItem.name }}</h3>
+  <p>{{ cartItem.description }}</p>
+
+  <button class="decrease-button" (click)="onDecreaseQuantity(cartItem)">-</button>
+  <p class="quantity">{{ cartItem.quantity }}</p>
+  <button class="increase-button" (click)="onIncreaseQuantity(cartItem)">+</button>
+
+  <p class="price">$ {{ cartItem.totalPrice.toFixed(2) }}</p>
+  <button class="delete-button" (click)="onDelete(cartItem.id)">Delete</button>
+</div>

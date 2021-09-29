@@ -16,17 +16,19 @@ export class CartItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onDeleteClick(cartItemId: any) {
+  onDelete(cartItemId: any) {
     this.onCartItemDelete.emit(cartItemId)
   }
 
-  onDecreaseQuantityClick(cartItem: CartItem) {
+  onDecreaseQuantity(cartItem: CartItem) {
+    if (cartItem.quantity === 1) this.onDelete(cartItem.id);
     cartItem.quantity -= 1;
     cartItem.totalPrice = cartItem.quantity * cartItem.price;
     this.onUpdateQuantity.emit(cartItem)
   }
 
-  onIncreaseQuantityClick(cartItem: CartItem) {
+  onIncreaseQuantity(cartItem: CartItem) {
+    if (cartItem.quantity === 10) return;
     cartItem.quantity += 1;
     cartItem.totalPrice = cartItem.quantity * cartItem.price;
     this.onUpdateQuantity.emit(cartItem)

@@ -37,7 +37,7 @@ const routes: Routes = [
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
-    RouterModule.forRoot(routes, {enableTracing: true})
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

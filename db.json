@@ -25,24 +25,5 @@
       "price": 44.25
     }
   ],
-  "cart-list": [
-    {
-      "id": 1,
-      "productId": 2,
-      "quantity": 4,
-      "totalPrice": 146.12,
-      "name": "Cargo Shorts",
-      "description": "",
-      "price": 36.53
-    },
-    {
-      "productId": 1,
-      "quantity": 1,
-      "totalPrice": 17.28,
-      "name": "T-Shirt",
-      "description": "",
-      "price": 17.28,
-      "id": 2
-    }
-  ]
+  "cart-list": []
 }

@@ -1,4 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  background-color: #f9f9f9;
+}
+
+.container {
+  margin: 20px 50px;
+  color: #353535;
+}
+
+.product {
+  margin: 20px 10px;
+  padding: 10px 20px;
+  width: 250px;
+  border: 2px solid #00000029;
+  border-radius: 10px;
+  float: left;
+  background-color: #e2e2e2c4;
+  color: #353535;
+  font-weight: bolder;
+}
+
+.buy-button, .delete-button {
+  float: right;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: #c53938;
+  font-weight: bolder;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}

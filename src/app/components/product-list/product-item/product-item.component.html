@@ -1,4 +1,6 @@
-<h3>{{ productItem.name }}</h3>
-<p>{{ productItem.description }}</p>
-<p>{{ productItem.price }}</p>
-<button (click)="onAddToCartClick(productItem)">Buy</button>
+<div class="product">
+  <h3>{{ productItem.name }}</h3>
+  <p>{{ productItem.description }}</p>
+  <p>$ {{ productItem.price }}</p>
+  <button class="buy-button" (click)="onAddToCartClick(productItem)">Buy</button>
+</div>
